@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Pizza Order Form</title>
+   <link rel="stylesheet" href="pizza.css">
+</head>
+<body>
+   <header>
+      <h1>Pizza Order Form</h1>
+   </header>
+   <main>
+      <img src="pizza_image.jpeg" alt="Delicious Pizza" class="pizza-image">
+      <form id="pizzaOrderForm" action="submit_order.php" method="post">
+        
+         <fieldset>
+            <legend>Delivery Information</legend>
+            <label for="nameInput">Name:</label>
+            <input type="text" id="nameInput" name="name" required>
+            <label for="addressInput">Street Address:</label>
+            <input type="text" id="addressInput" name="address" required>
+            <label for="cityInput">City:</label>
+            <input type="text" id="cityInput" name="city" required>
+            <label for="emailInput">Email:</label>
+            <input type="email" id="emailInput" name="email" required>
+            <label for="phoneInput">Phone:</label>
+            <input type="tel" id="phoneInput" name="phone" required>
+         </fieldset>
+         <fieldset>
+            <legend>Pizza Order</legend>
+            <label for="numOfPizzas">Number of Pizzas:</label>
+            <input type="number" id="numOfPizzas" name="numOfPizzas" min="1" required>
+            <label for="sizeSelect">Size:</label>
+            <select id="sizeSelect" name="size" required>
+               <option value="Small">Small</option>
+               <option value="Medium">Medium</option>
+               <option value="Large">Large</option>
+               <option value="Extra Large">Extra Large</option>
+            </select>
+            <fieldset>
+               <legend>Shape</legend>
+               <input type="radio" id="roundShape" name="shape" value="Round" required>
+               <label for="roundShape">Round</label>
+               <input type="radio" id="squareShape" name="shape" value="Square">
+               <label for="squareShape">Square</label>
+            </fieldset>
+            <fieldset>
+               <legend>Toppings</legend>
+               <input type="checkbox" id="pepperoni" name="toppings[]" value="Pepperoni">
+               <label for="pepperoni">Pepperoni</label>
+               <input type="checkbox" id="sausage" name="toppings[]" value="Sausage">
+               <label for="sausage">Sausage</label>
+               <input type="checkbox" id="mushrooms" name="toppings[]" value="Mushrooms">
+               <label for="mushrooms">Mushrooms</label>
+               <input type="checkbox" id="olive" name="toppings[]" value="olive">
+               <label for="olive">Olive</label>
+               <input type="checkbox" id="cheese" name="toppings[]" value="cheese">
+               <label for="cheese">Cheese</label>
+               <!-- Add more toppings as needed -->
+            </fieldset>
+            <fieldset>
+               <legend>Crust Type</legend>
+               <input type="radio" id="thinCrust" name="crust" value="Thin" required>
+               <label for="thinCrust">Thin Crust</label>
+               <input type="radio" id="deepDish" name="crust" value="Deep Dish">
+               <label for="deepDish">Deep Dish</label>
+            </fieldset>
+            <fieldset>
+               <legend>Delivery Method</legend>
+               <input type="radio" id="takeout" name="deliveryMethod" value="Takeout" required>
+               <label for="takeout">Takeout</label>
+               <input type="radio" id="delivery" name="deliveryMethod" value="Delivery">
+               <label for="delivery">Delivery</label>
+               <input type="radio" id="eatIn" name="deliveryMethod" value="Eat In">
+               <label for="eatIn">Eat In</label>
+            </fieldset>
+            <fieldset>
+               <legend>Special Instructions</legend>
+               <textarea id="specialInstructions" name="instructions" rows="4" cols="50" placeholder="Enter special instructions here"></textarea>
+            </fieldset>
+         </fieldset>
+         <button type="submit" id="previewbutton1">Place Order</button>
+         <button type="reset" id="previewbutton2" >Reset</button>
+      </form>
+      
+   </main>
+   <footer>
+      <p>&copy; 2024 Pizza Delight. All rights reserved.</p>
+   <p>Contact us at info@pizzadelight.com</p>
+   </footer>
+</body>
+</html>
